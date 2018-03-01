@@ -1,0 +1,11 @@
+C:\Users\chris\source\repos\KalibrateTest\TestApp\bin\Debug\TestApp.exe.config
+C:\Users\chris\source\repos\KalibrateTest\TestApp\bin\Debug\TestApp.exe
+C:\Users\chris\source\repos\KalibrateTest\TestApp\bin\Debug\TestApp.pdb
+C:\Users\chris\source\repos\KalibrateTest\TestApp\bin\Debug\KalibrateTest.Data.dll
+C:\Users\chris\source\repos\KalibrateTest\TestApp\bin\Debug\ProductService.dll
+C:\Users\chris\source\repos\KalibrateTest\TestApp\bin\Debug\KalibrateTest.Data.pdb
+C:\Users\chris\source\repos\KalibrateTest\TestApp\bin\Debug\ProductService.pdb
+C:\Users\chris\source\repos\KalibrateTest\TestApp\obj\Debug\TestApp.csprojResolveAssemblyReference.cache
+C:\Users\chris\source\repos\KalibrateTest\TestApp\obj\Debug\TestApp.csproj.CoreCompileInputs.cache
+C:\Users\chris\source\repos\KalibrateTest\TestApp\obj\Debug\TestApp.exe
+C:\Users\chris\source\repos\KalibrateTest\TestApp\obj\Debug\TestApp.pdb

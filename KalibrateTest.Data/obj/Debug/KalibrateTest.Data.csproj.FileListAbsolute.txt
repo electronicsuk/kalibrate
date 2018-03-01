@@ -1,0 +1,6 @@
+C:\Users\chris\source\repos\KalibrateTest\KalibrateTest.Data\bin\Debug\KalibrateTest.Data.dll
+C:\Users\chris\source\repos\KalibrateTest\KalibrateTest.Data\bin\Debug\KalibrateTest.Data.pdb
+C:\Users\chris\source\repos\KalibrateTest\KalibrateTest.Data\obj\Debug\KalibrateTest.Data.csproj.CoreCompileInputs.cache
+C:\Users\chris\source\repos\KalibrateTest\KalibrateTest.Data\obj\Debug\KalibrateTest.Data.dll
+C:\Users\chris\source\repos\KalibrateTest\KalibrateTest.Data\obj\Debug\KalibrateTest.Data.pdb
+C:\Users\chris\source\repos\KalibrateTest\KalibrateTest.Data\obj\Debug\KalibrateTest.Data.csprojResolveAssemblyReference.cache
