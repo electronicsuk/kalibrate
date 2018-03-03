@@ -4,20 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KalibrateTest.Data
+namespace KalibrateTest.BusinessLayer
 {
-    public class IncreaseQualityProduct :Product
+    public class IncreaseQualityProduct : IQualityDeteriateStratergy
     {       
-        public override string QualityControl()
-        {           
-          
-            int factor = SellIn * -1;
+        public string QualityControl(string name, int sellIn, int quality)
+        {
+             int factor = sellIn * -1;
             //increase quality the older it gets  
-               SellIn -= 1;          
-            Quality += (factor)*-1;
-            return base.Print();
-        } 
-
+               sellIn -= 1;          
+            quality += (factor)*-1;
+            quality = BaseRules.ApplyBusinessLogic(quality);
+            return name + " " + sellIn + " " + quality;
+        }
     }   
 
 }

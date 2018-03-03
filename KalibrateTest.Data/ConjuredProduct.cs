@@ -4,28 +4,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KalibrateTest.Data
+namespace KalibrateTest.BusinessLayer
 {
-    public class ConjuredProduct :Product
-    {       
-        public override string QualityControl()
-        {            
-            SellIn -= 1;
-            Quality -= 2;
-            if (SellIn <= 0)
+    public class ConjuredProduct : IQualityDeteriateStratergy
+    {
+        public string QualityControl(string name, int sellIn, int quality)
+        {
+              sellIn -= 1;
+            quality -= 2;
+            if (sellIn <= 0)
             {
-                Quality -= 2;
+                quality -= 2;
             }
             else
             {
-                Quality -= 1;
+                quality -= 1;
             }
 
-            return Print();
-        } 
-
-        
-
+            quality = BaseRules.ApplyBusinessLogic(quality);
+            return name + " " + sellIn + " " + quality;
+        }
     }   
 
 }

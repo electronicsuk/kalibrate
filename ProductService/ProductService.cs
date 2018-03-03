@@ -1,11 +1,11 @@
-﻿using KalibrateTest.Data;
+﻿using KalibrateTest.BusinessLayer;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using KalibrateTest.BusinessLayer.Objects;
 namespace KalibrateTest.Services
 {
     public  class ProductService
@@ -17,7 +17,7 @@ namespace KalibrateTest.Services
             {
                 if (!string.IsNullOrEmpty(row))
                 {
-                    Product product = null;
+                    IProduct product = new Product();
                     string[] rowData = row.Split(' ');
 
                     int sellInFieldIndex = 0;
@@ -31,42 +31,23 @@ namespace KalibrateTest.Services
                     {
                         rowData[0] += " " + rowData[1];
                         sellInFieldIndex = 2;
-                    }                  
-
-                    switch(rowData[0].ToLower())
-                    {
-                        case "aged brie":
-                            product = new IncreaseQualityProduct();
-                        break;
-                        case "normal item":
-                            product = new Product();
-                       break;
-                       case "sulfuras":
-                            product = new LegendaryProduct();
-                       break;
-                       case "backstage passes":
-                            product = new ConcertPass();
-                       break;
-                        case "conjured":
-                            product = new ConjuredProduct();
-                            break;
-                        default:
-                            product = new UnsupportedProduct();
-                            break;
                     }
 
+                    ProductFactory factory = new ProductFactory();                    
                     if (product != null)
                     {
+                        IQualityDeteriateStratergy currentProduct = factory.CreateQualityDeteriateStratergy(rowData[0].ToLower());
                         product.Name = rowData[0];
                         int sellInValue = 0;
                         int.TryParse(rowData[sellInFieldIndex], out sellInValue);
                         
                         product.SellIn = sellInValue;
+                        product.SetStratergy(currentProduct);
 
                         int qualityValue = 0;
                         int.TryParse(rowData[++sellInFieldIndex], out qualityValue);
                         product.Quality = qualityValue;                        
-                        products.Add(product.QualityControl());
+                        products.Add(product.QualityControl(product.Name,product.SellIn,product.Quality));
                     }
                    
                 }

@@ -1,12 +1,11 @@
-﻿namespace KalibrateTest.Data
+﻿namespace KalibrateTest.BusinessLayer
 {
-    public interface IProduct
+    public interface IProduct :IQualityDeteriateStratergy
     {
         string Name { get; set; }
         int SellIn { get; set; }
         int Quality { get; set; }
-
-        string QualityControl();
-        string Print();
+        IQualityDeteriateStratergy stratergy { get; }
+        void SetStratergy(IQualityDeteriateStratergy stratergy);
     }
 }

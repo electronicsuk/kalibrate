@@ -40,15 +40,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IProduct.cs" />
+    <Compile Include="IProductFactory.cs" />
+    <Compile Include="ProductFactory.cs" />
     <Compile Include="ProductService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UnsupportedProduct.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\KalibrateTest.Data\KalibrateTest.Data.csproj">
+    <ProjectReference Include="..\KalibrateTest.Data\KalibrateTest.BuinessLayer.csproj">
       <Project>{2243c192-59f8-4328-bb46-a0d6cd94dff8}</Project>
-      <Name>KalibrateTest.Data</Name>
+      <Name>KalibrateTest.BuinessLayer</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

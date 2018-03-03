@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KalibrateTest.Data
+namespace KalibrateTest.BusinessLayer
 {
-    public class LegendaryProduct : Product
-    {
-        public override string QualityControl()
+    public class LegendaryProduct : IQualityDeteriateStratergy
+    {        
+        public string QualityControl(string name, int sellIn, int quality)
         {
-            return base.Name + " " + base.SellIn + " " + Quality;    
+            return name + " " + sellIn + " " + quality;    
         }
     }
 }

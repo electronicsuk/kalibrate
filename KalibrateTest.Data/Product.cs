@@ -4,42 +4,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KalibrateTest.Data
+namespace KalibrateTest.BusinessLayer
 {
-    public class Product :IProduct
+    public class NormalProduct : IQualityDeteriateStratergy
     {
-        public string Name { get; set; }
-        public int SellIn { get; set; }
-        public int Quality { get; set; }
+        public string QualityControl(string name, int sellIn, int quality)
+        {
+            sellIn -= 1;
 
-        public virtual string QualityControl()
-        {            
-            SellIn -= 1;
-
-            if (SellIn <= 0)
+            if (sellIn <= 0)
             {
-                Quality -= 2;
+                quality -= 2;
             }
             else
             {
-                Quality -=1;
+                quality -= 1;
             }
-
-            return Print();
-        } 
-
-        public virtual string Print()
-        {
-            ApplyBusinessLogic();
-            return Name + " " + SellIn + " " + Quality;
-        }
-
-        public virtual void ApplyBusinessLogic()
-        {
-            if(Quality <= 0) { Quality = 0; }
-            else if(Quality > 50 ) { Quality = 50; }
-        }
-
+            quality = BaseRules.ApplyBusinessLogic(quality);
+            return name + " " + sellIn + " " + quality;
+        }       
     }   
 
 }

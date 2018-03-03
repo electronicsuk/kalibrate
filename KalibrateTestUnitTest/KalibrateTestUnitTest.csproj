@@ -58,9 +58,9 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\KalibrateTest.Data\KalibrateTest.Data.csproj">
+    <ProjectReference Include="..\KalibrateTest.Data\KalibrateTest.BuinessLayer.csproj">
       <Project>{2243c192-59f8-4328-bb46-a0d6cd94dff8}</Project>
-      <Name>KalibrateTest.Data</Name>
+      <Name>KalibrateTest.BuinessLayer</Name>
     </ProjectReference>
     <ProjectReference Include="..\ProductService\KalibrateTest.ProductService.csproj">
       <Project>{310ba7c3-8401-43f7-a3ce-96bf98a57f6d}</Project>

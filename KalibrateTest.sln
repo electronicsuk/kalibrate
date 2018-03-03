@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.10
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KalibrateTest.Data", "KalibrateTest.Data\KalibrateTest.Data.csproj", "{2243C192-59F8-4328-BB46-A0D6CD94DFF8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KalibrateTest.BuinessLayer", "KalibrateTest.Data\KalibrateTest.BuinessLayer.csproj", "{2243C192-59F8-4328-BB46-A0D6CD94DFF8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KalibrateTest.ProductService", "ProductService\KalibrateTest.ProductService.csproj", "{310BA7C3-8401-43F7-A3CE-96BF98A57F6D}"
 EndProject

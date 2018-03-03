@@ -4,28 +4,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KalibrateTest.Data
+namespace KalibrateTest.BusinessLayer
 {
-    public class ConcertPass : Product
+    public class ConcertPass : IQualityDeteriateStratergy
     {
-        public override string QualityControl()
+        public string QualityControl(string name, int sellIn, int quality)
         {
-            if(SellIn <= 5 && SellIn >0)
+            sellIn -= 1;
+            if (sellIn <= 5 && sellIn >0)
             {
-                Quality += 3;
-                SellIn -= 1;
+                quality += 3;                
             }
-            else if(SellIn <=0)
+            else if(sellIn <=0)
             {
-                base.QualityControl();
+                quality = 0;
             }
-            else if(SellIn <=10)
+            else if(sellIn <=10)
             {
-                Quality += 2;
-                SellIn -= 1;
+                quality += 2;                
             }
-           
-            return base.Print();
+            quality = BaseRules.ApplyBusinessLogic(quality);            
+            return name + " " + sellIn + " " + quality;
         }
     }
 }
